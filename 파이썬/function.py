@@ -85,7 +85,7 @@ def print_kwargs(**kwarg):
 keyword arguments: {'wine': 'melot', 'entree': 'mutton', 'dessert': 'macaroon'}"""
 #매개변수와 마찬가지로 *arg, **kwarg를 같이 사용하려면 이들을 순서대로 배치해야한다.
 
-#추가적인 스킬 Docstring - 힘수의 몸체시작부분에 문서를 붙여서 함수의 정의를 보충설명해 줄 수 있댜.
+#추가적인 스킬 Docstring - 함수의 몸체 시작 부분에 문서를 붙여서 함수의 정의를 보충설명해 줄 수 있댜.
 #ex)1
 def echo(any):
     'echo reterns its input argument'
