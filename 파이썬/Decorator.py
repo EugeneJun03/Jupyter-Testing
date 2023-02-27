@@ -6,7 +6,7 @@
     2. 내부함수
     3. 함수인자
 """
-#ex) document_it()
+#ex)1 document_it()
 #1.함수 이름과 인자값을 출력한다.
 #2.인자로 함수를 실행힌다.
 #3.결과를 출력한다.
@@ -44,3 +44,35 @@ Positional arguments: (3, 5)
 Keyword arguments: {}
 Result: 8
 8"""
+
+#ex)2 square_it - 결과를 제곱하는 데커레이터
+def square_it(func):
+    def new_function(*arg, **kwarg):
+        result = func(*arg, **kwarg)
+        return result * result
+    return new_function
+"""
+>>> @document_it
+... @square_it
+... def add_ints(a,b):
+...     return a + b   
+...
+>>> add_ints(3,5)
+Running funtion: new_function
+Positional arguments: (3, 5)
+Keyword arguments: {}
+Result: 64
+64"""
+#실행 순서 바꾸기 - 결과는 같지만 중간과정이 바뀐다.
+"""
+>>> @square_it
+... @document_it
+... def add_ints(a,b):
+...     return a + b
+...
+>>> add_ints(3,5)
+Running funtion: add_ints
+Positional arguments: (3, 5)
+Keyword arguments: {}
+Result: 8
+64"""
