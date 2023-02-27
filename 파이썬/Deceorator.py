@@ -20,7 +20,18 @@ def document_it(func):
         print('Result:', result)
         return result
     return new_function
+#사용법
+def add_ints(a, b):
+    return a+b
 
-
-        
+"""
+>>> add_ints(3, 5)
+8
+>>> cooler_add_int = document_it(add_ints) 
+>>> cooler_add_int(3,5)
+Running funtion: add_ints
+Positional arguments: (3, 5)
+Keyword arguments: {}
+Result: 8
+8"""
 
