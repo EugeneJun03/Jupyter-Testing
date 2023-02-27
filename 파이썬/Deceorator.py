@@ -23,7 +23,6 @@ def document_it(func):
 #사용법
 def add_ints(a, b):
     return a+b
-
 """
 >>> add_ints(3, 5)
 8
@@ -34,4 +33,14 @@ Positional arguments: (3, 5)
 Keyword arguments: {}
 Result: 8
 8"""
-
+#자동으로 데커레이터 사용하기
+"""
+>>> @document_it 
+... def add_ints(a, b):
+...     return a + b
+>>> add_ints(3,5) 
+Running funtion: add_ints
+Positional arguments: (3, 5)
+Keyword arguments: {}
+Result: 8
+8"""
