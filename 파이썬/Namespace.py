@@ -53,7 +53,7 @@ inside change_and_print_global: wombat
 >>> animal
 'wombat'"""
 
-"""네임스페이스의 내용에 접근하기!
+"""+네임스페이스의 내용에 접근하기!
 사용함수:
     1.locals() - 로컬 네임스페이스의 내용이 담긴 딕셔너리를 반환한다.
     2.globals() - 글로벌 네임스페이스의 내용이 담긴 딕셔너리를 반환한다."""
@@ -78,3 +78,21 @@ globals: {'__name__': '__main__', '__doc__': None, '__package__': None,
 >>> animal
 'fruitbat'
 '''
+
+# 추가적인 개념 - 이름에 _와 __사용
+"""두 언더스코어(__)로 시작하고 끝나는 이름은 파이썬 내부에서 예약이 되어 있다.
+그러므로 변수를 설정할 때 __를 사용해서는 안 된다.
+언더스코어 예시:
+    1.function.__name__ - 함수의 이름이 있는 시스템 변수
+    2.function.__doc__ - 함수의 Docstring()""" 
+
+def amazing():
+    '''This is the amazing function.
+    Want to see it again?'''
+    print('This function is named:', amazing.__name__)
+    print('And its docsting is:', amazing.__doc__)
+"""
+>>> amazing()
+This function is named: amazing
+And its docsting is: This is the amazing function.
+    Want to see it again?"""
