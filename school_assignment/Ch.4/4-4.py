@@ -16,4 +16,18 @@ def abbreviation():
     resoult =''.join(abbreviation_list)
     return resoult
 
-abbreviation()
+#abbreviation()
+
+
+word = ['i', 'pa', 'te', 'ni', 'niti', 'a', 'ali', 'nego', 'no', 'ili']
+a = input().split()
+b = str()
+if a[0] in word:
+        b += a[0][0]
+    
+for i in range(0, len(a)):
+    if a[i] in word:
+        continue
+    else:
+        b += a[i][0]
+print(b.upper())
