@@ -9,7 +9,8 @@ def make_file():
     elif n ==2:
         f = open("account_book.txt", 'r')
         for word in f:
-            print(word)
+            line = word.strip()
+            print(word, end="")
         f.close()
     else:
         f = open("account_book.txt", 'a')
