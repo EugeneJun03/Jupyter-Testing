@@ -1,7 +1,7 @@
 #가계부 프로그램 1
 import datetime
 today = datetime.datetime.today()
-def make_file():
+def make_file1():
     n = int(input("1.'새로 만들기', 2.'가계부 보기', 3.'수입 추가하기', 4.'지출 추가하기' 중 한가지를 선택하시오(번호):"))
     if n == 1:
         f = open("account_book.txt", 'w')
@@ -23,13 +23,13 @@ def make_file():
             f.write(f'[지출] {today.year}-{today.month}-{today.day} {today.hour}:{today.minute}:{today.second}.{today.microsecond}: {m}\n')
             f.close()
         
-# make_file()
+make_file1()
 
 # 가계부 프로그램 2
 import csv
 import datetime
 today = datetime.datetime.today()
-def make_file():
+def make_file2():
     n = int(input("1.'새로 만들기', 2.'가계부 보기', 3.'수입 추가하기', 4.'지출 추가하기' 중 한가지를 선택하시오(번호):"))
     if n == 1:
         f = open("account_book.csv", 'w')
@@ -41,7 +41,7 @@ def make_file():
             print(line)
         f.close()
     else:
-        f = open("account_book.csv", 'a')
+        f = open("account_book.csv", 'a', newline="")
         wr = csv.writer(f)
         if n == 3:
             m = input("수입금액을 입력하시오(금액 + 사유):").split()
@@ -72,4 +72,4 @@ def make_file():
             f.close()
             u.close()
         
-make_file() # cvs에 내용을 추가할 때마다 빈 리스트가 추가되는 것은 없애야 함
+#make_file2() # cvs에 내용을 추가할 때마다 빈 리스트가 추가되는 것은 없애야 함
