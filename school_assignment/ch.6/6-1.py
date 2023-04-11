@@ -6,7 +6,7 @@ def make_file1():
     if n == 1:
         f = open("account_book.txt", 'w')
         f.close()
-    elif n ==2:
+    elif n == 2:
         f = open("account_book.txt", 'r')
         for word in f:
             line = word.strip()
@@ -71,5 +71,5 @@ def make_file2():
             wr.writerow(['지출', f'{today.year}-{today.month}-{today.day} {today.hour}:{today.minute}:{today.second}.{today.microsecond}', f'{a}',f'{b}',f'{full}'])
             f.close()
             u.close()
-        
+
 make_file2()
