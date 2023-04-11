@@ -72,4 +72,4 @@ def make_file2():
             f.close()
             u.close()
         
-#make_file2() # cvs에 내용을 추가할 때마다 빈 리스트가 추가되는 것은 없애야 함
+make_file2()
