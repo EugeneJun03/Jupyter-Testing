@@ -70,6 +70,6 @@ def make_file2():
             full -= a
             wr.writerow(['지출', f'{today.year}-{today.month}-{today.day} {today.hour}:{today.minute}:{today.second}.{today.microsecond}', f'{a}',f'{b}',f'{full}'])
             f.close()
-            u.close()
+            u.close() 
 
 make_file2()

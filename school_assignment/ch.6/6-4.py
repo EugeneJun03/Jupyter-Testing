@@ -26,8 +26,6 @@ ans1 = sum1/2
 ans2 = sum2/2
 print(year, ans1, "/", ans2)
 
-
-
 # 4-2
 import csv
 f = open("tpmon.csv", "w", newline="")
