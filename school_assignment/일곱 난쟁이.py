@@ -1,4 +1,6 @@
-n = input().split()
+n = []
+for i in range(9):
+    n.append(input())
 sum = 0
 for i in n:
     sum += int(i)
